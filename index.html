@@ -27,3 +27,63 @@
   <p>David is a peon.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saintsworn - Locked</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    #siteContent {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login">
+    <h1>SAINTSWORN</h1>
+    <p>This site is under construction. Enter password to view.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+
+  <div id="siteContent">
+    <h2>Welcome to SAINTSWORN</h2>
+    <p>This is where your main site will go once it's live.</p>
+    <!-- Add your site HTML here -->
+  </div>
+
+  <script>
+    const correctPassword = "peon"; // 🔐 Change this to your secret
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      if (input === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("siteContent").style.display = "block";
+      } else {
+        alert("Wrong password.");
+      }
+    }
+  </script>
+
+</body>
+</html>
